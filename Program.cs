@@ -22,14 +22,14 @@ internal class Program
           var YeieldNoAsyncValue = YieldWithAsync();
           await foreach (var Count in YeieldNoAsyncValue)
           {
-              Console.WriteLine($"Thread is {Thread.CurrentThread.ManagedThreadId}");
+              Console.WriteLine($"YieldWithAsync Thread is {Thread.CurrentThread.ManagedThreadId}");
               Console.WriteLine(Count);
           }
 
         var YieldAsyncValue = YieldWithoutAsync();
         foreach (var Count in YieldAsyncValue)
         {
-            Console.WriteLine($"Thread is {Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine($"YieldWithoutAsync Thread is {Thread.CurrentThread.ManagedThreadId}");
             Console.WriteLine(Count);
         }
 
